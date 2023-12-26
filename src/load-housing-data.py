@@ -21,3 +21,6 @@ def load_housing_data():
         with tarfile.open(tarball_path) as housing_tarball:
             housing_tarball.extractall(path="datasets")
     return pd.read_csv(Path("datasets/housing.csv"))
+
+# add the csv data red from the housing.csv file into the var housing
+housing = load_housing_data()
